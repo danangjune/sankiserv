@@ -88,9 +88,9 @@
                                 @if($vidcon->status_kegiatan == 'pending')
                                     <button class="btn btn-danger status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="proses">Proses Vidcon</button>
                                 @elseif($vidcon->status_kegiatan == 'proses')
-                                    <button class="btn btn-warning status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="selesai">Konfirmasi Selesai</button>
+                                    <button class="btn btn-warning status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="selesai">Selesai Vidcon</button>
                                 @elseif($vidcon->status_kegiatan == 'selesai')
-                                    <span class="btn btn-success">Dilaksanakan</span>
+                                    <span class="btn btn-success">Vidcon Terlaksana</span>
                                 @endif
                             </td>
                         </tr>
