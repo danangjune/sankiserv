@@ -1,116 +1,116 @@
 @include('layout.header')
 
 <!-- Navbar -->
-  @include('layout.navbar')
-  <!-- /.navbar -->
+@include('layout.navbar')
+<!-- /.navbar -->
 
-  <!-- Main Sidebar Container -->
-  @include('layout.sidebar')
+<!-- Main Sidebar Container -->
+@include('layout.sidebar')
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Permohonan Vidcon</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Permohonan Vidcon</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Permohonan Vidcon</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Permohonan Vidcon</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
 
     <div class="card">
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Permohonan Masuk / Perlu Di Approve</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                    <table class="table table-bordered table-hover">
-                        <!-- Tabel data permohonan vidcon -->
-                        <!-- Kolom-kolom data -->
-                        @foreach($permohonanVidcon as $vidcon)
-                        <tr>
-                            <!-- Data per baris -->
-                            <td>{{ $vidcon->id_permohonan_vidcon }}</td>
-                            <td>{{ $vidcon->pemohon->nama_pemohon }}</td>
-                            <td>{{ $vidcon->pemohon->opd_pemohon }}</td>
-                            <td>{{ $vidcon->judul_vidcon }}</td>
-                            <td>{{ $vidcon->tanggal_vidcon }}</td>
-                            <td>{{ $vidcon->waktu_vidcon }}</td>
-                            <td>{{ $vidcon->lokasi_vidcon }}</td>
-                            <td>{{ $vidcon->peserta_vidcon }}</td>
-                            <!-- Badge dukungan vidcon -->
-                            <td>
-                                @php
-                                $dukungan = json_decode($vidcon->dukungan_vidcon, true);
-                                @endphp
-                                @if(is_array($dukungan))
-                                    @foreach($dukungan as $item)
-                                    @php
-                                    $badgeClass = '';
-                                    switch ($item) {
-                                        case 'alat dan operator':
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Permohonan Masuk / Perlu Di Approve</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <!-- Tabel data permohonan vidcon -->
+                                    <!-- Kolom-kolom data -->
+                                    @foreach($permohonanVidcon as $vidcon)
+                                    <tr>
+                                        <!-- Data per baris -->
+                                        <td>{{ $vidcon->id_permohonan_vidcon }}</td>
+                                        <td>{{ $vidcon->pemohon->nama_pemohon }}</td>
+                                        <td>{{ $vidcon->pemohon->opd_pemohon }}</td>
+                                        <td>{{ $vidcon->judul_vidcon }}</td>
+                                        <td>{{ $vidcon->tanggal_vidcon }}</td>
+                                        <td>{{ $vidcon->waktu_vidcon }}</td>
+                                        <td>{{ $vidcon->lokasi_vidcon }}</td>
+                                        <td>{{ $vidcon->peserta_vidcon }}</td>
+                                        <!-- Badge dukungan vidcon -->
+                                        <td>
+                                            @php
+                                            $dukungan = json_decode($vidcon->dukungan_vidcon, true);
+                                            @endphp
+                                            @if(is_array($dukungan))
+                                            @foreach($dukungan as $item)
+                                            @php
+                                            $badgeClass = '';
+                                            switch ($item) {
+                                            case 'alat dan operator':
                                             $badgeClass = 'badge-primary';
                                             break;
-                                        case 'link zoom':
+                                            case 'link zoom':
                                             $badgeClass = 'badge-secondary';
                                             break;
-                                        case 'internet on demand':
+                                            case 'internet on demand':
                                             $badgeClass = 'badge-success';
                                             break;
-                                        case 'jaringan':
+                                            case 'jaringan':
                                             $badgeClass = 'badge-warning';
                                             break;
-                                        default:
+                                            default:
                                             $badgeClass = 'badge-primary';
                                             break;
-                                    }
-                                    @endphp
-                                    <span class="badge {{ $badgeClass }}">{{ $item }}</span>
+                                            }
+                                            @endphp
+                                            <span class="badge {{ $badgeClass }}">{{ $item }}</span>
+                                            @endforeach
+                                            @endif
+                                        </td>
+                                        <!-- Tombol status kegiatan -->
+                                        <td>
+                                            @if($vidcon->status_kegiatan == 'pending')
+                                            <button class="btn btn-danger status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="proses">Proses Vidcon</button>
+                                            @elseif($vidcon->status_kegiatan == 'proses')
+                                            <button class="btn btn-warning status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="selesai">Selesai Vidcon</button>
+                                            @elseif($vidcon->status_kegiatan == 'selesai')
+                                            <span class="btn btn-success">Vidcon Terlaksana</span>
+                                            @endif
+                                        </td>
+                                    </tr>
                                     @endforeach
-                                @endif
-                            </td>
-                            <!-- Tombol status kegiatan -->
-                            <td>
-                                @if($vidcon->status_kegiatan == 'pending')
-                                    <button class="btn btn-danger status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="proses">Proses Vidcon</button>
-                                @elseif($vidcon->status_kegiatan == 'proses')
-                                    <button class="btn btn-warning status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="selesai">Konfirmasi Selesai</button>
-                                @elseif($vidcon->status_kegiatan == 'selesai')
-                                    <span class="btn btn-success">Dilaksanakan</span>
-                                @endif
-                            </td>
-                        </tr>
-                        @endforeach
-                    </table>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col -->
                 </div>
-              <!-- /.card-body -->
+                <!-- /.row -->
             </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
-  </div>
-
-  @include('layout.footer')
+            <!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+@include('layout.footer')
 
 <!-- Modal Konfirmasi -->
 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
@@ -144,7 +144,7 @@
             if (status === 'proses') {
                 url = '/admin/permohonan-vidcon/' + id + '/proses';
             } else if (status === 'selesai') {
-                url = '/admin/permohonan-vidcon/' + id+ '/selesai';
+                url = '/admin/permohonan-vidcon/' + id + '/selesai';
             }
 
             // Tampilkan modal konfirmasi
