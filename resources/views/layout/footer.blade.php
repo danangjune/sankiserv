@@ -1,16 +1,16 @@
 <footer class="main-footer">
-    <strong>Copyright &copy; 2024 <a href="https://csirt.kedirikota.go.id">SANKI Team</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0.0
-    </div>
+  <strong>Copyright &copy; 2024 <a href="https://csirt.kedirikota.go.id">SANKI Team</a>.</strong>
+  All rights reserved.
+  <div class="float-right d-none d-sm-inline-block">
+    <b>Version</b> 1.0.0
+  </div>
 </footer>
 
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
+<!-- Control Sidebar -->
+<aside class="control-sidebar control-sidebar-dark">
+  <!-- Control sidebar content goes here -->
+</aside>
+<!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
 
@@ -18,7 +18,8 @@
 <!-- jQuery UI 1.11.4 -->
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton{{asset('lte')}}/n', $.ui.button)
+  $.widget.bridge('uibutton{{asset('
+    lte ')}}/n', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
 <!-- ChartJS -->
@@ -50,9 +51,11 @@
 <script src="{{asset('lte')}}/dist/js/pages/dashboard.js"></script>
 
 <script>
-  $(function () {
+  $(function() {
     $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "responsive": true,
+      "lengthChange": false,
+      "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
@@ -67,4 +70,5 @@
   });
 </script>
 </body>
+
 </html>
