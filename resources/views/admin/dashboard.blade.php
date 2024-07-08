@@ -50,27 +50,11 @@
 
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>105</h3>
 
-                <p>Permohonan Selesai</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>95<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Presentasi Pelaksanaan</p>
+                <p>Permohonan Perlu Diproses</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -84,9 +68,25 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
+                <h3>95</h3>
+
+                <p>Vidcon Selesai Dilaksanakan</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">Detail <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-secondary">
+              <div class="inner">
                 <h3>15</h3>
 
-                <p>OPD Terdaftar</p>
+                <p>User Terdaftar</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
