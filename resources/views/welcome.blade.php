@@ -15,7 +15,7 @@
 </head>
 
 <body class="">
-    <header>
+    <header class="">
         <div class="text-center py-3">
             <div class="container">
                 <div class="row gx-5 justify-content-center">
@@ -87,7 +87,7 @@
             <img class="card-body" src="{{asset('logos')}}/layanan1.png" alt="Card image cap">
         </div>
     </div>
-    <footer>
+    <footer class="fixed-bottom">
         <div class="py-1" style="background-color: #C200BA;"></div>
         <div class="card text-center bg-secondary-subtle">
             <div class="card-body">
