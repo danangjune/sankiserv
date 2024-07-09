@@ -43,6 +43,7 @@
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none">KONTAK</a></li>
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none">FAQ</a></li>
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none">CSIRT</a></li>
+                        <li><a href="#" class="px-2 text-dark" style="text-decoration:none">SURVEY</a></li>
                     </ul>
                 </div>
                 <div class="nav col-sm-4 justify-content-center">

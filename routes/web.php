@@ -22,3 +22,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::patch('/permohonan-vidcon/{id}/proses', [PermohonanVidconController::class, 'prosesVidcon'])->name('permohonan-vidcon.proses');
     Route::patch('/permohonan-vidcon/{id}/selesai', [PermohonanVidconController::class, 'selesaiVidcon'])->name('permohonan-vidcon.selesai');
 });
+
+Route::get('/vidcon/create', [PermohonanVidconController::class, 'create'])->name('vidcon.create');
+Route::post('/vidcon/store', [PermohonanVidconController::class, 'store'])->name('vidcon.store');
+Route::get('/vidcon/download-pdf', [PermohonanVidconController::class, 'download_pdf'])->name('vidcon.download_pdf');
+Route::get('/vidcon/download', [PermohonanVidconController::class, 'download'])->name('vidcon.download');
+
+
+
+
+
