@@ -27,44 +27,6 @@
 
     <!-- Main content -->
 
-<<<<<<< HEAD
-    <div class="card">
-        <section class="content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h3 class="card-title">Permohonan Masuk / Perlu Di Approve</h3>
-                            </div>
-                            <!-- /.card-header -->
-                            <div class="card-body">
-                                <table class="table table-bordered table-hover">
-                                    <!-- Tabel data permohonan vidcon -->
-                                    <!-- Kolom-kolom data -->
-                                    @foreach($permohonanVidcon as $vidcon)
-                                    <tr>
-                                        <!-- Data per baris -->
-                                        <td>{{ $vidcon->id_permohonan_vidcon }}</td>
-                                        <td>{{ $vidcon->pemohon->nama_pemohon }}</td>
-                                        <td>{{ $vidcon->pemohon->opd_pemohon }}</td>
-                                        <td>{{ $vidcon->judul_vidcon }}</td>
-                                        <td>{{ $vidcon->tanggal_vidcon }}</td>
-                                        <td>{{ $vidcon->waktu_vidcon }}</td>
-                                        <td>{{ $vidcon->lokasi_vidcon }}</td>
-                                        <td>{{ $vidcon->peserta_vidcon }}</td>
-                                        <!-- Badge dukungan vidcon -->
-                                        <td>
-                                            @php
-                                            $dukungan = json_decode($vidcon->dukungan_vidcon, true);
-                                            @endphp
-                                            @if(is_array($dukungan))
-                                            @foreach($dukungan as $item)
-                                            @php
-                                            $badgeClass = '';
-                                            switch ($item) {
-                                            case 'alat dan operator':
-=======
     <!-- <div class="card"> -->
     <section class="content">
       <div class="container-fluid">
@@ -101,7 +63,6 @@
                                     $badgeClass = '';
                                     switch ($item) {
                                         case 'alat dan operator':
->>>>>>> 404be605f5fe9324187a480af8a974ef20496f68
                                             $badgeClass = 'badge-primary';
                                             break;
                                             case 'link zoom':

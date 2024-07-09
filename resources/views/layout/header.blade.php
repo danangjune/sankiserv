@@ -3,7 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SANKI Support | Dashboard</title>
+  <title>@yield('title', 'SANKI SUPPORT')</title>
+
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{asset('lte')}}/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{asset('lte')}}/dist/css/adminlte.min.css">
+
+  <!-- jQuery -->
+  <script src="{{ asset('adminlte/plugins/jquery/jquery.min.js') }}"></script>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -39,7 +47,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
-<link rel="stylesheet" href="{{asset('lte')}}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-<link rel="stylesheet" href="{{asset('lte')}}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-<link rel="stylesheet" href="{{asset('lte')}}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 
