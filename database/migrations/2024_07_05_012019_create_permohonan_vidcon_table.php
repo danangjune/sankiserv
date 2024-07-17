@@ -20,10 +20,10 @@ class CreatePermohonanVidconTable extends Migration
             $table->date('tanggal_vidcon');
             $table->time('waktu_vidcon');
             $table->string('lokasi_vidcon');
-            $table->text('peserta_vidcon');
-            $table->longText('dukungan_vidcon');
-            $table->enum('status_kegiatan', ['pending', 'proses', 'selesai'])->default('pending');
-            $table->string('pdf_path')->nullable();
+            $table->string('peserta_vidcon');
+            $table->string('dukungan_vidcon');
+            $table->string('status_kegiatan');
+            $table->string('keterangan');
             $table->timestamps();
 
             $table->foreign('id_pemohon')->references('id_pemohon')->on('pemohon')->onDelete('cascade');

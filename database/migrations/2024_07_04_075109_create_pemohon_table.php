@@ -14,11 +14,12 @@ class CreatePemohonTable extends Migration
     public function up()
     {
         Schema::create('pemohon', function (Blueprint $table) {
-            $table->id('id_pemohon'); // Menggunakan id_pemohon sebagai primary key
+            $table->id('id_pemohon');
             $table->string('nama_pemohon');
-            $table->string('nip_pemohon', 20);
+            $table->string('jabatan_pemohon', 20);
             $table->string('opd_pemohon');
             $table->string('email_pemohon')->unique();
+            $table->string('no_telepon');
             $table->timestamps();
         });
     }
