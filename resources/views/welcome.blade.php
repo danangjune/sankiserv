@@ -42,6 +42,7 @@
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>KONTAK</b></a></li>
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>FAQ</b></a></li>
+                        <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>SURVEY</b></a></li>
                         <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>CSIRT</b></a></li>
                     </ul>
                 </div>

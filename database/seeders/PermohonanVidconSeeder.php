@@ -24,6 +24,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Manajemen Utama',
                 'dukungan_vidcon' => json_encode(['alat dan operator', 'link zoom']),
                 'status_kegiatan' => 'pending',
+                'pdf_path' => '1.pdf',
             ],
             [
                 'id_pemohon' => 24,
@@ -34,6 +35,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Kerja',
                 'dukungan_vidcon' => json_encode(['infrastruktur', 'link zoom']),
                 'status_kegiatan' => 'proses',
+                'pdf_path' => '2.pdf',
             ],
             [
                 'id_pemohon' => 21,
@@ -42,8 +44,9 @@ class PermohonanVidconSeeder extends Seeder
                 'waktu_vidcon' => '14:00:00',
                 'lokasi_vidcon' => 'Ruang Diskusi B',
                 'peserta_vidcon' => 'Staf Kebijakan',
-                'dukungan_vidcon' => json_encode(['alat dan operator']),
+                'dukungan_vidcon' => json_encode(['alat dan operator', 'internet on demand']),
                 'status_kegiatan' => 'selesai',
+                'pdf_path' => '3.pdf',
             ],
             [
                 'id_pemohon' => 26,
@@ -54,6 +57,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Sosialisasi',
                 'dukungan_vidcon' => json_encode(['link zoom']),
                 'status_kegiatan' => 'pending',
+                'pdf_path' => '4.pdf',
             ],
             [
                 'id_pemohon' => 25,
@@ -64,6 +68,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Proyek',
                 'dukungan_vidcon' => json_encode(['alat dan operator', 'link zoom']),
                 'status_kegiatan' => 'proses',
+                'pdf_path' => '5.pdf',
             ],
             [
                 'id_pemohon' => 21,
@@ -74,6 +79,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Evaluasi',
                 'dukungan_vidcon' => json_encode(['infrastruktur']),
                 'status_kegiatan' => 'selesai',
+                'pdf_path' => '6.pdf',
             ],
             [
                 'id_pemohon' => 27,
@@ -84,6 +90,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Rencana',
                 'dukungan_vidcon' => json_encode(['alat dan operator']),
                 'status_kegiatan' => 'pending',
+                'pdf_path' => '7.pdf',
             ],
             [
                 'id_pemohon' => 28,
@@ -94,6 +101,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Survey',
                 'dukungan_vidcon' => json_encode(['link zoom']),
                 'status_kegiatan' => 'proses',
+                'pdf_path' => '8.pdf',
             ],
             [
                 'id_pemohon' => 29,
@@ -104,6 +112,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Pengembangan',
                 'dukungan_vidcon' => json_encode(['alat dan operator', 'link zoom']),
                 'status_kegiatan' => 'selesai',
+                'pdf_path' => '9.pdf',
             ],
             [
                 'id_pemohon' => 30,
@@ -114,6 +123,7 @@ class PermohonanVidconSeeder extends Seeder
                 'peserta_vidcon' => 'Tim Kebijakan',
                 'dukungan_vidcon' => json_encode(['infrastruktur']),
                 'status_kegiatan' => 'pending',
+                'pdf_path' => '10.pdf',
             ],
         ];
 

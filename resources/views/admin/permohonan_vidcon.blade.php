@@ -28,20 +28,30 @@
     <!-- Main content -->
 
     <!-- <div class="card"> -->
-    <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Permohonan Masuk / Perlu Di Approve</h3>
-              </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Daftar Permohonan Vidcon</h3>
+            </div>
               <!-- /.card-header -->
               <div class="card-body">
-                    <table class="table table-bordered table-hover">
-                        <!-- Tabel data permohonan vidcon -->
-                        <!-- Kolom-kolom data -->
-                        @foreach($permohonanVidcon as $vidcon)
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Pemohon</th>
+                    <th>OPD</th>
+                    <th>Judul</th>
+                    <th>Tanggal</th>
+                    <th>Waktu</th>
+                    <th>Tempat</th>
+                    <th>Peserta</th>
+                    <th>Bantuan</th>
+                    <th>Proses</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  @foreach($permohonanVidcon as $vidcon)
                         <tr>
                             <!-- Data per baris -->
                             <td>{{ $vidcon->id_permohonan_vidcon }}</td>
@@ -95,19 +105,9 @@
                                         </td>
                                     </tr>
                                     @endforeach
-                                </table>
-                            </div>
-                            <!-- /.card-body -->
-                        </div>
-                        <!-- /.card -->
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
+                  </tbody>
+                </table>
             </div>
-            <!-- /.container-fluid -->
-        </section>
-        <!-- /.content -->
     </div>
 </div>
 @include('layout.footer')
