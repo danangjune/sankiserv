@@ -7,9 +7,7 @@
             <h3><b>STANDAR OPERASIONAL PROSEDUR (SOP)</b></h3>
         </div>
         <div class="card">
-            <div class="card-header">
-                <h3 class="card-title">Daftar Standar Operasional Prosedur (SOP)</h3>
-            </div>
+            <div class="card-header" style="background-image: url({{asset('logos')}}/nap.png);"></div>
             <!-- /.card-header -->
             <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -79,6 +77,7 @@
                     </tbody>
                 </table>
             </div>
+            <div class="card-footer" style="background-image: url({{asset('logos')}}/nap.png);"></div>
             <!-- /.card-body -->
         </div>
     </section>

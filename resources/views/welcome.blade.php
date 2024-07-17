@@ -7,38 +7,38 @@
             <h3><b>SANKI SUPPORT</b></h3>
         </div>
         <div class="card-deck container mt-2 mb-2">
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
         </div>
         <div class="card-deck container mt-2 mb-2">
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
-            <div class="card">
-                <img class="card-body" src="{{asset('logos')}}/layanan1a.png" alt="Card image cap">
-            </div>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
+            <a href="" class="card" style="box-shadow:none; border:none">
+                <img class="card-body" src="{{asset('logos')}}/calendar.gif" alt="Card image cap">
+            </a>
         </div>
     </section>
 </body>
