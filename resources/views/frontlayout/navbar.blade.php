@@ -15,21 +15,23 @@
     <nav class="py-2" style="background-image: url({{asset('logos')}}/nap.png);">
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="{{asset('logos')}}/logo-sanki.png" width="45" height="45" class="d-inline-block align-top" alt="">
                 </a>
             </div>
             <div class="col-sm-4">
                 <ul class="nav justify-content-center align-middle py-2">
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>PROFIL</b></a></li>
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>KONTAK</b></a></li>
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>FAQ</b></a></li>
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>SURVEY</b></a></li>
-                    <li><a href="#" class="px-2 text-dark" style="text-decoration:none"><b>CSIRT</b></a></li>
+                    <li><a href="profil" class="px-2 text-dark" style="text-decoration:none"><b>PROFIL</b></a></li>
+                    <li><a href="sop" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
+                    <li><a href="kontak" class="px-2 text-dark" style="text-decoration:none"><b>KONTAK</b></a></li>
+                    <li><a href="faq" class="px-2 text-dark" style="text-decoration:none"><b>FAQ</b></a></li>
+                    <li><a href="survey" class="px-2 text-dark" style="text-decoration:none"><b>SURVEY</b></a></li>
+                    <li><a href="https://csirt.kedirikota.go.id/" target="_blank" class="px-2 text-dark" style="text-decoration:none"><b>CSIRT</b></a></li>
                 </ul>
             </div>
             <div class="nav col-sm-4 justify-content-center">
+                <button type="button" class="btn">Register</button>
+                <button type="button" class="btn">Login</button>
             </div>
         </div>
     </nav>

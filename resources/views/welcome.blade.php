@@ -2,7 +2,7 @@
 @include('frontlayout.navbar')
 
 <body>
-    <section>
+    <section class="container">
         <div class="text-center mt-4 mb-4">
             <h3><b>SANKI SUPPORT</b></h3>
         </div>

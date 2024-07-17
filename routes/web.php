@@ -7,6 +7,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+Route::get('/sop', function () {
+    return view('sop');
+});
+Route::get('/kontak', function () {
+    return view('kontak');
+});
+Route::get('/faq', function () {
+    return view('faq');
+});
+Route::get('/survey', function () {
+    return view('survey');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -28,8 +44,3 @@ Route::get('/vidcon/create', [PermohonanVidconController::class, 'create'])->nam
 Route::post('/vidcon/store', [PermohonanVidconController::class, 'store'])->name('vidcon.store');
 Route::get('/vidcon/download-pdf', [PermohonanVidconController::class, 'download_pdf'])->name('vidcon.download_pdf');
 Route::get('/vidcon/download', [PermohonanVidconController::class, 'download'])->name('vidcon.download');
-
-
-
-
-
