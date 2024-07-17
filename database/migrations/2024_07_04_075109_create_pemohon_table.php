@@ -15,12 +15,13 @@ class CreatePemohonTable extends Migration
     {
         Schema::create('pemohon', function (Blueprint $table) {
             $table->id('id_pemohon');
-            $table->string('nama_pemohon');
+            $table->unsignedBigInteger('id_user');
             $table->string('jabatan_pemohon', 20);
             $table->string('opd_pemohon');
-            $table->string('email_pemohon')->unique();
             $table->string('no_telepon');
             $table->timestamps();
+            
+            $table->foreign('id_user')->references('id_user')->on('users')->onDelete('cascade');
         });
     }
 
