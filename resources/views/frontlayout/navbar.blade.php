@@ -12,7 +12,7 @@
     </div>
     <!-- Image and text -->
     <div class="py-1" style="background-color: #C200BA;"></div>
-    <nav class="py-2" style="background-image: url(logos/nap.png);">
+    <nav class="py-2" style="background-image: url({{asset('logos')}}/nap.png);">
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">
                 <a class="navbar-brand" href="#">

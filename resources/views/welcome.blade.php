@@ -41,15 +41,6 @@
             </div>
         </div>
     </section>
-    <footer class="mt-5" style="background-image: url(logos/nap.png);">
-        <div class="py-1" style="background-color: #C200BA;"></div>
-        <div class="text-center">
-            <div class="py-3">
-                <p class="card-text">Hak Cipta @2024 Dinas Komunikasi dan Informatika Kota Kediri</p>
-            </div>
-        </div>
-        <!-- <div class="py-1" style="background-color: #C200BA;"></div> -->
-    </footer>
 </body>
 
 @include('frontlayout.footer')
