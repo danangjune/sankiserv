@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Pemohon;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -52,6 +53,9 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'jabatan_pemohon' => ['required', 'string', 'max:255'],
+            'opd_pemohon' => ['required', 'string', 'max:255'],
+            'no_telepon' => ['required', 'string', 'max:15'],
         ]);
     }
 
@@ -63,10 +67,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+        // Create a new Pemohon record
+        Pemohon::create([
+            'id_user' => $user->id_user,
+            'jabatan_pemohon' => $data['jabatan_pemohon'],
+            'opd_pemohon' => $data['opd_pemohon'],
+            'no_telepon' => $data['no_telepon'],
+        ]);
+
+        return $user;
     }
 }

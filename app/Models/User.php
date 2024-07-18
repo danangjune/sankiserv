@@ -22,6 +22,8 @@ class User extends Authenticatable
         'password',
     ];
 
+    protected $primaryKey = 'id_user';
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -43,5 +45,10 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function pemohon()
+    {
+        return $this->hasOne(Pemohon::class, 'id_user', 'id');
     }
 }
