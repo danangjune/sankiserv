@@ -1,17 +1,18 @@
 <header>
-    <div class="text-center py-3">
+    <div class="text-center py-3" style="background-color: #C200BA;">
         <div class="container">
             <div class="row gx-5 justify-content-center">
                 <div class="col-sm-12">
-                    <img src="{{asset('logos')}}/logo-pemkot.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
-                    <img src="{{asset('logos')}}/kominfo.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
-                    <img src="{{asset('logos')}}/Logo_BSSN_new.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/border-pemkot.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/border-kominfo.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/border-bssn.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
                 </div>
             </div>
         </div>
     </div>
     <!-- Image and text -->
-    <div class="py-1" style="background-color: #C200BA;"></div>
+    <div class="py-1" style="background-color: #36CCD0;"></div>
+    <!-- <div class="py-1" style="background-color: #36CCD0;"></div> -->
     <nav class="py-2" style="background-image: url({{asset('logos')}}/nap.png);">
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">
@@ -19,7 +20,7 @@
                     <img src="{{asset('logos')}}/logo-sanki.png" width="45" height="45" class="d-inline-block align-top" alt="">
                 </a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4" style="align-items:center">
                 <ul class="nav justify-content-center align-middle py-2">
                     <li><a href="profil" class="px-2 text-dark" style="text-decoration:none"><b>PROFIL</b></a></li>
                     <li><a href="sop" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
@@ -29,37 +30,37 @@
                     <li><a href="https://csirt.kedirikota.go.id/" target="_blank" class="px-2 text-dark" style="text-decoration:none"><b>CSIRT</b></a></li>
                 </ul>
             </div>
-            <div class="nav col-sm-4 justify-content-center">
+            <div class="nav col-sm-4 justify-content-center" style="display:flex; align-items:center">
                 @guest
                 @if (Route::has('login'))
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link text-dark" href="{{ route('login') }}"><img src="{{asset('logos')}}/angle-right.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ __('Login') }}</a>
                 </li>
                 @endif
 
                 @if (Route::has('register'))
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="nav-link text-dark" href="{{ route('register') }}"><img src="{{asset('logos')}}/add.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ __('Register') }}</a>
                 </li>
                 @endif
                 @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle  text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }}
+                        <img src="{{asset('logos')}}/user.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ Auth::user()->name }}
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Profil') }}
+                            <img src="{{asset('logos')}}/portrait.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ __('Profil Pemohon') }}
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Tracking Permohonan') }}
+                            <img src="{{asset('logos')}}/rocket-lunch.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ __('Tracking Permohonan') }}
                         </a>
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
+                            <img src="{{asset('logos')}}/angle-left.png" width="15" height="15" class="mr-2" alt="" style="margin-bottom: 3px;">{{ __('Logout') }}
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
