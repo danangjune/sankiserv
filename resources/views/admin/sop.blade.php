@@ -13,12 +13,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Permohonan Vidcon</h1>
+                    <h1>Standar Operasional Prosedur</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Permohonan Vidcon</li>
+                        <li class="breadcrumb-item active">SOP</li>
                     </ol>
                 </div>
             </div>
@@ -29,82 +29,45 @@
 
     <!-- <div class="card"> -->
 
-    <div class="card">
+    <div class="card card-primary card-outline">
         <div class="card-header">
-            <h3 class="card-title">Daftar Permohonan Vidcon</h3>
+            <h3 class="card-title">Daftar SOP</h3>
         </div>
         <!-- /.card-header -->
+
         <div class="card-body">
-            <table id="example1" class="table table-bordered table-striped">
-                <thead>
+            <div class="d-flex justify-content-end mb-2">
+                <button type="button" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#saldoawalModalTambah"><i class="fa fa-plus"></i>
+                    Tambah Data
+                </button>
+            </div>
+
+            <table id="example1" class="table table-sm table-bordered table-striped">
+                <thead class="text-center">
                     <tr>
-                        <th>ID</th>
-                        <th>Pemohon</th>
-                        <th>OPD</th>
-                        <th>Judul</th>
-                        <th>Tanggal</th>
-                        <th>Waktu</th>
-                        <th>Tempat</th>
-                        <th>Peserta</th>
-                        <th>Bantuan</th>
-                        <th>Proses</th>
+                        <th>No</th>
+                        <th>Uraian</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($permohonanVidcon as $vidcon)
+                    @forelse ($sops as $key => $sop)
                     <tr>
                         <!-- Data per baris -->
-                        <td>{{ $vidcon->id_permohonan_vidcon }}</td>
-                        <td>{{ $vidcon->pemohon->nama_pemohon }}</td>
-                        <td>{{ $vidcon->pemohon->opd_pemohon }}</td>
-                        <td>{{ $vidcon->judul_vidcon }}</td>
-                        <td>{{ $vidcon->tanggal_vidcon }}</td>
-                        <td>{{ $vidcon->waktu_vidcon }}</td>
-                        <td>{{ $vidcon->lokasi_vidcon }}</td>
-                        <td>{{ $vidcon->peserta_vidcon }}</td>
-                        <!-- Badge dukungan vidcon -->
-                        <td>
-                            @php
-                            $dukungan = json_decode($vidcon->dukungan_vidcon, true);
-                            @endphp
-                            @if(is_array($dukungan))
-                            @foreach($dukungan as $item)
-                            @php
-                            $badgeClass = '';
-                            switch ($item) {
-                            case 'alat dan operator':
-                            $badgeClass = 'badge-primary';
-                            break;
-                            case 'link zoom':
-                            $badgeClass = 'badge-secondary';
-                            break;
-                            case 'internet on demand':
-                            $badgeClass = 'badge-success';
-                            break;
-                            case 'jaringan':
-                            $badgeClass = 'badge-warning';
-                            break;
-                            default:
-                            $badgeClass = 'badge-primary';
-                            break;
-                            }
-                            @endphp
-                            <span class="badge {{ $badgeClass }}">{{ $item }}</span>
-                            @endforeach
-                            @endif
-                        </td>
+                        <td>{{ $key + 1 }}</td>
+                        <td>{{ $sop->uraian}}</td>
                         <!-- Tombol status kegiatan -->
                         <td>
-                            @if($vidcon->status_kegiatan == 'pending')
-                            <button class="btn btn-danger status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="proses">Proses Vidcon</button>
-                            @elseif($vidcon->status_kegiatan == 'proses')
-                            <button class="btn btn-warning status-btn" data-id="{{ $vidcon->id_permohonan_vidcon }}" data-status="selesai">Selesai Vidcon</button>
-                            @elseif($vidcon->status_kegiatan == 'selesai')
-                            <span class="btn btn-success">Vidcon Terlaksana</span>
-                            @endif
+                            <button class="btn btn-sm btn-primary status-btn" data-id="" data-status="proses"><i class="fa fa-eye" aria-hidden="true"></i></button>
+                            <button class="btn btn-sm btn-warning status-btn" data-id="" data-status="selesai"><i class="fa fa-edit" aria-hidden="true"></i></button>
+                            <span class="btn btn-sm btn-danger"><i class="fa fa-trash" aria-hidden="true"></i></span>
                         </td>
                     </tr>
-                    @endforeach
+                    @empty
+                    <tr>
+                        <td colspan="5"> Data Kosong </td>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
         </div>
