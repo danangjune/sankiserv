@@ -3,9 +3,9 @@
         <div class="container">
             <div class="row gx-5 justify-content-center">
                 <div class="col-sm-12">
-                    <img src="{{asset('logos')}}/border-pemkot.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
-                    <img src="{{asset('logos')}}/border-kominfo.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
-                    <img src="{{asset('logos')}}/border-bssn.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/logo-pemkot.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/kominfo.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
+                    <img src="{{asset('logos')}}/Logo_BSSN_new.png" alt="Logo Sanki" style="height: 2rem" class="px-1" />
                 </div>
             </div>
         </div>

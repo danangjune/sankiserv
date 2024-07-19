@@ -30,7 +30,7 @@ class PemohonController extends Controller
         Pemohon::create($request->all());
 
         return redirect()->route('pemohon.index')
-                         ->with('success', 'Pemohon created successfully.');
+            ->with('success', 'Pemohon created successfully.');
     }
 
     public function show($id)
@@ -58,7 +58,7 @@ class PemohonController extends Controller
         $pemohon->update($request->all());
 
         return redirect()->route('pemohon.index')
-                         ->with('success', 'Pemohon updated successfully.');
+            ->with('success', 'Pemohon updated successfully.');
     }
 
     public function destroy($id)
@@ -67,7 +67,6 @@ class PemohonController extends Controller
         $pemohon->delete();
 
         return redirect()->route('pemohon.index')
-                         ->with('success', 'Pemohon deleted successfully.');
+            ->with('success', 'Pemohon deleted successfully.');
     }
 }
-

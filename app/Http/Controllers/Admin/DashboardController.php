@@ -31,15 +31,15 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        // Ambil data jumlah vidcon per bulan
+           // Ambil data jumlah vidcon per bulan
         $vidconData = PermohonanVidcon::select(
             DB::raw('MONTH(tanggal_vidcon) as month'),
             DB::raw('COUNT(*) as count')
         )
-        ->groupBy('month')
-        ->get()
-        ->pluck('count', 'month')
-        ->toArray();
+            ->groupBy('month')
+            ->get()
+            ->pluck('count', 'month')
+            ->toArray();
 
         // Buat array dengan nilai default 0 untuk setiap bulan
         $monthlyData = array_fill(1, 12, 0);
@@ -49,6 +49,4 @@ class DashboardController extends Controller
 
         return view('admin.dashboard', compact('monthlyData'));
     }
-
 }
-

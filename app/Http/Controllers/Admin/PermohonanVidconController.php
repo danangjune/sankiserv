@@ -25,7 +25,7 @@ class PermohonanVidconController extends Controller
     public function prosesVidcon($id)
     {
         $vidcon = PermohonanVidcon::findOrFail($id);
-        
+
         $vidcon->status_kegiatan = 'proses';
         $vidcon->save();
 
@@ -35,7 +35,7 @@ class PermohonanVidconController extends Controller
     public function selesaiVidcon($id)
     {
         $vidcon = PermohonanVidcon::findOrFail($id);
-        
+
         $vidcon->status_kegiatan = 'selesai';
         $vidcon->save();
 
@@ -105,5 +105,3 @@ class PermohonanVidconController extends Controller
         }
     }
 }
-
-
