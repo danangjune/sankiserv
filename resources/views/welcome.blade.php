@@ -9,7 +9,7 @@
 
     .logo:hover {
         transform: scale(1.1);
-        /* Contoh: Memperbesar gambar saat hover */
+        /* Contooh: Memperbesar gambar saat hover */
     }
 </style>
 
