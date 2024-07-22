@@ -32,6 +32,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermohonanVidconController;
 use App\Http\Controllers\Admin\SopController;
+use App\Http\Controllers\Admin\PermohonanResetPasswordController;
+
+
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -41,6 +44,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     Route::patch('/permohonan-vidcon/{id}/proses', [PermohonanVidconController::class, 'prosesVidcon'])->name('permohonan-vidcon.proses');
     Route::patch('/permohonan-vidcon/{id}/selesai', [PermohonanVidconController::class, 'selesaiVidcon'])->name('permohonan-vidcon.selesai');
+
+    Route::get('/permohonan-reset-password', [PermohonanResetPasswordController::class, 'index'])->name('permohonan-reset-password');
 });
 
 Route::get('/vidcon/create', [PermohonanVidconController::class, 'create'])->name('vidcon.create');
