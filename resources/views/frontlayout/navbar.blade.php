@@ -22,7 +22,7 @@
             <div class="col-sm-4" style="align-items:center">
                 <ul class="nav justify-content-center align-middle py-2">
                     <li><a href="profil" class="px-2 text-dark" style="text-decoration:none"><b>PROFIL</b></a></li>
-                    <li><a href="sop" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
+                    <li><a href="{{route('sop')}}" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
                     <li><a href="kontak" class="px-2 text-dark" style="text-decoration:none"><b>KONTAK</b></a></li>
                     <li><a href="faq" class="px-2 text-dark" style="text-decoration:none"><b>FAQ</b></a></li>
                     <li><a href="survey" class="px-2 text-dark" style="text-decoration:none"><b>SURVEY</b></a></li>
