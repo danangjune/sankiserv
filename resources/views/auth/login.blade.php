@@ -54,13 +54,13 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn" style="background-image: url({{asset('logos')}}/nap.png);">
-                                    <b>{{ __('Login') }}</b>
+                                <button type="submit" class="btn" style="background-color: #36CCD0;">
+                                    <b class="text-light">{{ __('Login') }}</b>
                                 </button>
 
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    <b>{{ __('Forgot Your Password?') }}</b>
+                                    <b class="text-dark">{{ __('Forgot Your Password?') }}</b>
                                 </a>
                                 @endif
                             </div>

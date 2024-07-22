@@ -1,5 +1,5 @@
 <header>
-    <div class="text-center py-3" style="background-color: #C200BA;">
+    <div class="text-center py-3" style="background: linear-gradient(to right, #A2009A, #FFB7FC, #A2009A)";>
         <div class="container">
             <div class="row gx-5 justify-content-center">
                 <div class="col-sm-12">
