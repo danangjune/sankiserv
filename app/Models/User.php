@@ -49,6 +49,6 @@ class User extends Authenticatable
 
     public function pemohon()
     {
-        return $this->hasOne(Pemohon::class, 'id_user', 'id');
+        return $this->hasOne(Pemohon::class, 'id_user', 'id_user');
     }
 }

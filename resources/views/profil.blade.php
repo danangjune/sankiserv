@@ -31,7 +31,7 @@
                                 <div class="active tab-pane" id="activity">
                                     <!-- Post -->
                                     <div class="post">
-                                        <img class="container" src="{{asset('logos')}}/bagansanki.jpeg" alt="User profile picture">
+                                        <img class="container" src="{{asset('logos')}}/bagansanki.png" alt="User profile picture">
                                     </div>
                                 </div>
                                 <!-- /.tab-pane -->
