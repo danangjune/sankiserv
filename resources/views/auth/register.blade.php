@@ -108,8 +108,8 @@
                 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn" style="background-image: url({{asset('logos')}}/nap.png);">
-                                    <b>{{ __('Daftar') }}</b>
+                                <button type="submit" class="btn" style="background-color: #36CCD0;">
+                                    <b class="text-light">{{ __('Daftar') }}</b>
                                 </button>
                             </div>
                         </div>

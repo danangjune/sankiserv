@@ -7,7 +7,7 @@ use App\Models\Sop;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class SopController extends Controller
+class BsopController extends Controller
 {
     /**
      * Display a listing of the resource.

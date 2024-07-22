@@ -1,5 +1,5 @@
 <header>
-    <div class="text-center py-3" style="background-color: #C200BA;">
+    <div class="text-center py-3" style="background: linear-gradient(to right, #A2009A, #FFB7FC, #A2009A)" ;>
         <div class="container">
             <div class="row gx-5 justify-content-center">
                 <div class="col-sm-12">
@@ -12,7 +12,6 @@
     </div>
     <!-- Image and text -->
     <div class="py-1" style="background-color: #36CCD0;"></div>
-    <!-- <div class="py-1" style="background-color: #36CCD0;"></div> -->
     <nav class="py-2" style="background-image: url({{asset('logos')}}/nap.png);">
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">
@@ -23,7 +22,7 @@
             <div class="col-sm-4" style="align-items:center">
                 <ul class="nav justify-content-center align-middle py-2">
                     <li><a href="profil" class="px-2 text-dark" style="text-decoration:none"><b>PROFIL</b></a></li>
-                    <li><a href="sop" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
+                    <li><a href="{{route('sop')}}" class="px-2 text-dark" style="text-decoration:none"><b>SOP</b></a></li>
                     <li><a href="kontak" class="px-2 text-dark" style="text-decoration:none"><b>KONTAK</b></a></li>
                     <li><a href="faq" class="px-2 text-dark" style="text-decoration:none"><b>FAQ</b></a></li>
                     <li><a href="survey" class="px-2 text-dark" style="text-decoration:none"><b>SURVEY</b></a></li>

@@ -11,7 +11,7 @@
     <!-- <div class="py-1" style="background-color: #C200BA;"></div> -->
 </footer>
 
-<!-- REQUIRED SCRIPTS -->
+<!-- REQUIREDz SCRIPTS -->
 <!-- jQuery -->
 <script src="{{asset('lte')}}/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->

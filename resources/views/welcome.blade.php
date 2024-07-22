@@ -9,7 +9,7 @@
 
     .logo:hover {
         transform: scale(1.1);
-        /* Contoh: Memperbesar gambar saat hover */
+        /* Contooh: Memperbesar gambar saat hover */
     }
 </style>
 
@@ -19,7 +19,7 @@
             <h3><b>SANKI SUPPORT</b></h3>
         </div>
         <div class="card-deck container mt-2 mb-2">
-            <a href="" class="card logo" style="box-shadow:none; border:none;">
+            <a href="{{ route('vidcon.create') }}" class="card logo" style="box-shadow:none; border:none;">
                 <img class="card-body" src="{{asset('logos')}}/lay-vidco.gif" alt="Card image cap">
             </a>
             <a href="" class="card logo" style="box-shadow:none; border:none">
