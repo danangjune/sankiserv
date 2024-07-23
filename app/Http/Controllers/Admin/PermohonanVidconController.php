@@ -110,7 +110,7 @@ class PermohonanVidconController extends Controller
             $templateProcessor->setValue('opd_pemohon', $request->opd);
             $templateProcessor->setValue('alamat_opd', $request->alamat_opd);
             $templateProcessor->setValue('nomer_surat', $request->nomor_surat);
-            $templateProcessor->setValue('tanggal_pengajuan', $tanggal_pengajuan->format('d-m-Y'));
+            $templateProcessor->setValue('tanggal_pengajuan', $tanggal_pengajuan);
             $templateProcessor->setValue('bentuk_dukungan', implode(', ', $request->dukungan_vidcon ?? []));
             $templateProcessor->setValue('dasar_pelaksanaan_vidcon', $request->dasar_pelaksanaan);
             $templateProcessor->setValue('acara_vidcon', $request->acara);
@@ -136,7 +136,6 @@ class PermohonanVidconController extends Controller
                 'message' => 'Permohonan vidcon berhasil disimpan.',
                 'file' => url('storage/vidcon/' . $permohonan->id_permohonan_vidcon . '.docx')
             ]);
-
         } catch (\Exception $e) {
             Log::error('Error creating DOCX: ' . $e->getMessage());
             return response()->json(['message' => 'Terjadi kesalahan saat menyimpan permohonan vidcon.'], 500);
