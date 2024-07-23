@@ -34,16 +34,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Admin
 
-<<<<<<< HEAD
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\PermohonanVidconController;
-use App\Http\Controllers\Admin\SopController;
-use App\Http\Controllers\Admin\PermohonanResetPasswordController;
-
-
-
-=======
->>>>>>> bb216854a497e4a2c6b5fc28ce67468c59a9d429
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/permohonan-vidcon', [PermohonanVidconController::class, 'index'])->name('permohonan-vidcon');
