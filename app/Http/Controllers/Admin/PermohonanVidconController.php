@@ -16,6 +16,7 @@ use PhpOffice\PhpWord\TemplateProcessor;
 use PhpOffice\PhpWord\IOFactory;
 use PhpOffice\PhpWord\Settings;
 use PhpOffice\PhpWord\Shared\ZipArchive;
+use Carbon\Carbon;
 
 
 class PermohonanVidconController extends Controller
@@ -96,10 +97,13 @@ class PermohonanVidconController extends Controller
 
             Log::info('Saved Permohonan:', $permohonan->toArray());
 
+            Carbon::setLocale('id');
+
             // Ambil updated_at dari model
-            $tanggal_pengajuan = $permohonan->updated_at->format('d-m-Y');
+            $tanggal_pengajuan = Carbon::parse($permohonan->updated_at)->translatedFormat('j F Y');
 
             // Settings::setZipClass(Settings::PCLZIP);
+            $hariTanggal = Carbon::parse($request->hari_tanggal)->translatedFormat('l, j F Y');
 
             // Buat TemplateProcessor
             $templateProcessor = new \PhpOffice\PhpWord\TemplateProcessor(resource_path('docs/template_vidcon.docx'));
@@ -110,11 +114,11 @@ class PermohonanVidconController extends Controller
             $templateProcessor->setValue('opd_pemohon', $request->opd);
             $templateProcessor->setValue('alamat_opd', $request->alamat_opd);
             $templateProcessor->setValue('nomer_surat', $request->nomor_surat);
-            $templateProcessor->setValue('tanggal_pengajuan', $tanggal_pengajuan->format('d-m-Y'));
+            $templateProcessor->setValue('tanggal_pengajuan', $tanggal_pengajuan);
             $templateProcessor->setValue('bentuk_dukungan', implode(', ', $request->dukungan_vidcon ?? []));
             $templateProcessor->setValue('dasar_pelaksanaan_vidcon', $request->dasar_pelaksanaan);
             $templateProcessor->setValue('acara_vidcon', $request->acara);
-            $templateProcessor->setValue('hari_tanggal', $request->hari_tanggal);
+            $templateProcessor->setValue('hari_tanggal', $hariTanggal);
             $templateProcessor->setValue('waktu', $request->waktu);
             $templateProcessor->setValue('tempat', $request->tempat);
             $templateProcessor->setValue('nama_kepala', $request->nama_kepala_dinas);
@@ -131,7 +135,7 @@ class PermohonanVidconController extends Controller
 
             Log::info('File saved successfully at ' . $filePath);
 
-            // Jika Sukses
+            // Try Sukses
             return response()->json([
                 'message' => 'Permohonan vidcon berhasil disimpan.',
                 'file' => url('storage/vidcon/' . $permohonan->id_permohonan_vidcon . '.docx')
