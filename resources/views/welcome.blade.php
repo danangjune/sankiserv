@@ -22,7 +22,7 @@
             <a href="{{ route('vidcon.create') }}" class="card logo" style="box-shadow:none; border:none;">
                 <img class="card-body" src="{{asset('logos')}}/lay-vidco.gif" alt="Card image cap">
             </a>
-            <a href="" class="card logo" style="box-shadow:none; border:none">
+            <a href="{{ route('terbit-tte.create') }}" class="card logo" style="box-shadow:none; border:none">
                 <img class="card-body" src="{{asset('logos')}}/lay-penerbitan-tte.gif" alt="Card image cap">
             </a>
             <a href="" class="card logo" style="box-shadow:none; border:none">

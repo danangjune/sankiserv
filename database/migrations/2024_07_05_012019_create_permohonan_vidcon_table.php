@@ -16,16 +16,21 @@ class CreatePermohonanVidconTable extends Migration
         Schema::create('permohonan_vidcon', function (Blueprint $table) {
             $table->id('id_permohonan_vidcon');
             $table->unsignedBigInteger('id_pemohon');
-            $table->string('judul_vidcon');
-            $table->date('tanggal_vidcon');
-            $table->time('waktu_vidcon');
-            $table->string('lokasi_vidcon');
-            $table->string('peserta_vidcon');
-            $table->string('dukungan_vidcon');
-            $table->string('status_kegiatan');
-            $table->string('keterangan');
+            $table->string('alamat_opd');
+            $table->text('dasar_pelaksanaan');
+            $table->string('nomer_surat');
+            $table->string('acara');
+            $table->string('hari_tanggal');
+            $table->string('waktu');
+            $table->string('tempat');
+            $table->text('peserta')->nullable();
+            $table->text('bentuk_dukungan')->nullable();
+            $table->string('nama_kepala');
+            $table->string('nip_kepala');
+            $table->string('pangkat_kepala');
             $table->timestamps();
 
+            // Foreign key constraint
             $table->foreign('id_pemohon')->references('id_pemohon')->on('pemohon')->onDelete('cascade');
         });
     }

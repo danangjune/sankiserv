@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SopController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\PermohonanTTEController;
 use App\Http\Controllers\Admin\PermohonanVidconController;
 use App\Http\Controllers\Admin\BsopController;
 
@@ -44,6 +45,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 Route::get('/vidcon/create', [PermohonanVidconController::class, 'create'])->name('vidcon.create');
+Route::post('/vidcon/store-docx', [PermohonanVidconController::class, 'storeDocx'])->name('vidcon.storeDocx');
+
 Route::post('/vidcon/store', [PermohonanVidconController::class, 'store'])->name('vidcon.store');
 Route::get('/vidcon/download-pdf', [PermohonanVidconController::class, 'download_pdf'])->name('vidcon.download_pdf');
 Route::get('/vidcon/download', [PermohonanVidconController::class, 'download'])->name('vidcon.download');
+
+Route::get('/terbit-tte/create', [PermohonanTTEController::class, 'create'])->name('terbit-tte.create');
+Route::post('/terbit-tte/store', [PermohonanTTEController::class, 'store'])->name('terbit-tte.store');

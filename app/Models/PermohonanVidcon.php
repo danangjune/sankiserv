@@ -8,20 +8,25 @@ use Illuminate\Database\Eloquent\Model;
 class PermohonanVidcon extends Model
 {
     use HasFactory;
+
     protected $table = 'permohonan_vidcon';
+    
     protected $primaryKey = 'id_permohonan_vidcon';
 
     protected $fillable = [
-        'id_permohonan_vidcon',
         'id_pemohon',
-        'judul_vidcon',
-        'tanggal_vidcon',
-        'waktu_vidcon',
-        'lokasi_vidcon',
-        'peserta_vidcon',
-        'dukungan_vidcon',
-        'status_kegiatan',
-        'keterangan',
+        'alamat_opd',
+        'dasar_pelaksanaan',
+        'nomer_surat',
+        'acara',
+        'hari_tanggal',
+        'waktu',
+        'tempat',
+        'peserta',
+        'bentuk_dukungan',
+        'nama_kepala',
+        'nip_kepala',
+        'pangkat_kepala',
     ];
 
     // Define the relationship with the Pemohon model

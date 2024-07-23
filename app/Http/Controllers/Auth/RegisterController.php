@@ -53,6 +53,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'nip' => ['required', 'string', 'max:18'],  // Aturan validasi untuk NIP
+            'nik' => ['required', 'string', 'max:16'],  // Aturan validasi untuk NIK
             'jabatan_pemohon' => ['required', 'string', 'max:255'],
             'opd_pemohon' => ['required', 'string', 'max:255'],
             'no_telepon' => ['required', 'string', 'max:15'],
@@ -73,11 +75,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
-        // Create a new Pemohon record
         Pemohon::create([
             'id_user' => $user->id_user,
-            'jabatan_pemohon' => $data['jabatan_pemohon'],
-            'opd_pemohon' => $data['opd_pemohon'],
+            'nip' => $data['nip'],
+            'nik' => $data['nik'],
+            'jabatan' => $data['jabatan_pemohon'],
+            'opd' => $data['opd_pemohon'],
             'no_telepon' => $data['no_telepon'],
         ]);
 

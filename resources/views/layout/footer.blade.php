@@ -30,10 +30,10 @@
 <!-- jQuery -->
 <!-- jQuery UI 1.11.4 -->
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+<!-- <script>
   $.widget.bridge('uibutton{{asset('
     lte ')}}/n', $.ui.button)
-</script>
+</script> -->
 <!-- Bootstrap 4 -->
 <!-- ChartJS -->
 <!-- Sparkline -->
