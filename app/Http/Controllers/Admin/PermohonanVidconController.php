@@ -141,7 +141,6 @@ class PermohonanVidconController extends Controller
                 'message' => 'Permohonan vidcon berhasil disimpan.',
                 'file' => url('storage/vidcon/' . $permohonan->id_permohonan_vidcon . '.docx')
             ]);
-
         } catch (\Exception $e) {
             Log::error('Error creating DOCX: ' . $e->getMessage());
             return response()->json(['message' => 'Terjadi kesalahan saat menyimpan permohonan vidcon.'], 500);
