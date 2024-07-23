@@ -11,7 +11,7 @@
         </div>
     </div>
     <!-- Image and text -->
-    <div class="py-1" style="background-color: #36CCD0;"></div>
+    <div class="py-1" style="background: linear-gradient(to right, #36CCD0, #8FFCFF, #36CCD0)" ;></div>
     <nav class="py-2" style="background-image: url({{asset('logos')}}/nap.png);">
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">

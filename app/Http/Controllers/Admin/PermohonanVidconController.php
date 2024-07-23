@@ -93,6 +93,7 @@ class PermohonanVidconController extends Controller
                 'nama_kepala' => $request->nama_kepala_dinas,
                 'nip_kepala' => $request->nip_kepala_dinas,
                 'pangkat_kepala' => $request->pangkat_kepala_dinas,
+                'status_kegiatan' => 'pending',
             ]);
 
             Log::info('Saved Permohonan:', $permohonan->toArray());

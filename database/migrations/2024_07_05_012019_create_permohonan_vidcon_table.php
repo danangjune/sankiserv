@@ -25,6 +25,7 @@ class CreatePermohonanVidconTable extends Migration
             $table->string('tempat');
             $table->text('peserta')->nullable();
             $table->text('bentuk_dukungan')->nullable();
+            $table->text('status_kegiatan');
             $table->string('nama_kepala');
             $table->string('nip_kepala');
             $table->string('pangkat_kepala');
