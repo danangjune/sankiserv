@@ -19,61 +19,17 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @forelse ($sops as $key => $sop)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
+                            <td>{{ $key + 1 }}</td>
+                            <td>{{ $sop->uraian}}</td>
                             <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
                         </tr>
+                        @empty
                         <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
+                            <td colspan="5"> Data Kosong </td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>APTIKA_01 SOP Eskalasi Penanganan Insiden Keamanan SPBE ke BSSN</td>
-                            <td><button type="button" class="btn btn-primary mr-1">Lihat</button><button type="button" class="btn btn-warning">Unduh</button></td>
-                        </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>
