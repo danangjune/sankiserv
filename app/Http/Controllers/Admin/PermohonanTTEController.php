@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Models\PermohonanTTE;
 use App\Models\Pemohon;
 
 class PermohonanTTEController extends Controller
@@ -19,22 +20,17 @@ class PermohonanTTEController extends Controller
 
     public function store(Request $request)
     {
-        // Validasi input
-        $validated = $request->validate([
-            'nip' => 'required|string',
-            'nik' => 'required|string',
-            'pangkat_golongan' => 'required|string',
-            'jabatan' => 'required|string',
-            'unit_kerja' => 'required|string',
-            'alamat_opd' => 'required|string',
-            'nomer_surat' => 'required|string',
-            'no_telepon' => 'required|string',
-            'keterangan_tambahan' => 'nullable|string',
+        $request->validate([
+            'id_pemohon' => 'required|exists:pemohon,id',
+            'alamat_opd' => 'required|string|max:255',
+            'perihal' => 'required|string|max:255',
+            'dasar_pelaksanaan' => 'required|string|max:255',
+            'nomer_surat' => 'required|string|max:255',
+            'status_kegiatan' => 'required|string|max:255',
         ]);
 
-        // Simpan data ke database atau lakukan tindakan lain
-        // Contoh: PermohonanTTE::create($validated);
+        PermohonanTTE::create($request->all());
 
-        // return redirect()->route('admin.permohonan_tte.create')->with('success', 'Form submitted successfully!');
+        return redirect()->route('admin.permohonan_tte.index')->with('success', 'Permohonan TTE berhasil diajukan.');
     }
 }

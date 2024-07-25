@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center mt-4 mb-4">
-                <h3><b>FORM PERMOHONAN VIDCON</b></h3>
+                <h3>PERMOHONAN VIDCON</h3>
             </div>
             <div class="card">
-                <div class="card-header" style="background-image: url({{asset('logos')}}/nap.png);"></div>
+                <div class="card-header text-center">Form Permohonan Vidcon - Sanki Support</div>
                 <div class="card-body">
                     <form action="{{ route('vidcon.storeDocx') }}" method="POST">
                         @csrf
@@ -65,10 +65,10 @@
                         <div class="form-group">
                             <label for="dukungan_vidcon">Bentuk Dukungan</label>
                             <div class="checkbox">
-                                <label><input type="checkbox" name="dukungan_vidcon[]" value="link zoom"> Link Zoom</label>
-                                <label><input type="checkbox" name="dukungan_vidcon[]" value="alat vidcon dan operator"> Alat Vidcon dan Operator</label>
-                                <label><input type="checkbox" name="dukungan_vidcon[]" value="jaringan internet"> Jaringan Internet</label>
-                                <label><input type="checkbox" name="dukungan_vidcon[]" value="internet on demand"> Internet On Demand</label>
+                                <label class="mr-1"><input type="checkbox" name="dukungan_vidcon[]" value="link zoom"> Link Zoom  </label>
+                                <label class="mr-1"><input type="checkbox" name="dukungan_vidcon[]" value="alat vidcon dan operator"> Alat Vidcon dan Operator  </label>
+                                <label class="mr-1"><input type="checkbox" name="dukungan_vidcon[]" value="jaringan internet"> Jaringan Internet  </label>
+                                <label class="mr-1"><input type="checkbox" name="dukungan_vidcon[]" value="internet on demand"> Internet On Demand  </label>
                             </div>
                         </div>
                         
@@ -96,7 +96,7 @@
                     </form>
                 </div>
          
-                <div class="card-footer" style="background-image: url({{asset('logos')}}/nap.png);"></div>
+                <!-- <div class="card-footer" style="background-image: url({{asset('logos')}}/nap.png);"></div> -->
             </div>
         </div>
     </div>

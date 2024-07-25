@@ -1,6 +1,6 @@
 <footer class="mt-5" style="background-image: url({{asset('logos')}}/nap.png);">
-    <div class="py-1" style="background: linear-gradient(to right, #A2009A, #FF89F9, #A2009A)" ;></div>
-    <div class="py-1" style="background: linear-gradient(to right, #36CCD0, #8FFCFF, #36CCD0)" ;></div>
+    <!-- <div class="py-1" style="background: linear-gradient(to right, #A2009A, #FF89F9, #A2009A)" ;></div> -->
+    <!-- <div class="py-1" style="background-color: #36CCD0" ;></div> -->
     <!-- <div class="py-1" style="background-color: #C200BA;"></div> -->
     <div class="text-center">
         <div class="py-3">

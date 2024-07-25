@@ -4,10 +4,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="text-center mt-4 mb-4">
-                <h3><b>FORM LOGIN</b></h3>
+                <h3>LOGIN</h3>
             </div>
             <div class="card">
-                <div class="card-header" style="background-image: url({{asset('logos')}}/nap.png);"></div>
+                <div class="card-header text-center">Form Login - Sanki Support</div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
@@ -68,7 +68,7 @@
                         </div>
                     </form>
                 </div>
-                <div class="card-footer" style="background-image: url({{asset('logos')}}/nap.png);"></div>
+                <!-- <div class="card-footer" style="background-image: url({{asset('logos')}}/nap.png);"></div> -->
             </div>
         </div>
     </div>

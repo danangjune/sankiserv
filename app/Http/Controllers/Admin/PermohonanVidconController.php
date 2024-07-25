@@ -30,25 +30,25 @@ class PermohonanVidconController extends Controller
         return view('admin.permohonan_vidcon', compact('permohonanVidcon'));
     }
 
-    public function prosesVidcon($id)
-    {
-        $vidcon = PermohonanVidcon::findOrFail($id);
+    // public function prosesVidcon($id)
+    // {
+    //     $vidcon = PermohonanVidcon::findOrFail($id);
 
-        $vidcon->status_kegiatan = 'proses';
-        $vidcon->save();
+    //     $vidcon->status_kegiatan = 'proses';
+    //     $vidcon->save();
 
-        return response()->json(['success' => 'Status updated to proses']);
-    }
+    //     return response()->json(['success' => 'Status updated to proses']);
+    // }
 
-    public function selesaiVidcon($id)
-    {
-        $vidcon = PermohonanVidcon::findOrFail($id);
+    // public function selesaiVidcon($id)
+    // {
+    //     $vidcon = PermohonanVidcon::findOrFail($id);
 
-        $vidcon->status_kegiatan = 'selesai';
-        $vidcon->save();
+    //     $vidcon->status_kegiatan = 'selesai';
+    //     $vidcon->save();
 
-        return response()->json(['success' => 'Status updated to selesai']);
-    }
+    //     return response()->json(['success' => 'Status updated to selesai']);
+    // }
 
     public function create()
     {
@@ -147,8 +147,6 @@ class PermohonanVidconController extends Controller
         }
     }
 
-
-
     // public function store(Request $request)
     // {
     //     // Validasi input
@@ -190,19 +188,19 @@ class PermohonanVidconController extends Controller
     //     return redirect()->route('vidcon.download_pdf')->with('success', 'Permohonan Vidcon berhasil disimpan dan PDF telah dihasilkan.');
     // }
 
-    public function download_pdf()
-    {
-        return view('vidcon.download-pdf');
-    }
+    // public function download_pdf()
+    // {
+    //     return view('vidcon.download-pdf');
+    // }
 
-    public function download()
-    {
-        $pdfPath = session('pdf_path');
+    // public function download()
+    // {
+    //     $pdfPath = session('pdf_path');
 
-        if ($pdfPath) {
-            return response()->download(storage_path('app/' . $pdfPath));
-        } else {
-            abort(404);
-        }
-    }
+    //     if ($pdfPath) {
+    //         return response()->download(storage_path('app/' . $pdfPath));
+    //     } else {
+    //         abort(404);
+    //     }
+    // }
 }

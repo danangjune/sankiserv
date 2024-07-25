@@ -16,7 +16,7 @@
 <body>
     <section class="container">
         <div class="text-center mt-4 mb-4">
-            <h3><b>SANKI SUPPORT</b></h3>
+            <h3>SANKI SUPPORT - PORTAL</h3>
         </div>
         <div class="card-deck container mt-2 mb-2">
             <a href="{{ route('vidcon.create') }}" class="card logo" style="box-shadow:none; border:none;">
