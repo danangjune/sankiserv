@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-center">
             <div class="nav col-sm-4 justify-content-center align-content-center">
                 <a class="navbar-brand" href="/">
-                    <img src="{{asset('logos')}}/logo-sanki.png" width="45" height="45" class="d-inline-block align-top" alt="">
+                    <img src="{{asset('logos')}}/logo_alter2.png" width="200" height="45" class="d-inline-block align-top" alt="">
                 </a>
             </div>
             <div class="col-sm-4" style="align-items:center">
